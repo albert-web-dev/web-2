@@ -1,0 +1,372 @@
+html{
+    scroll-behavior: smooth;
+}
+.body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 1000px;
+}
+/*--------------------------------------menu-------------------------------------*/
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 10;
+    transition: 0.6;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6;
+    -ms-transition: 0.6;
+    -o-transition: 0.6;
+}
+.sticky{
+    padding: 5px 100px;
+    background: #2a3132;
+    border-bottom: 1px solid #90afc5;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+header .menu a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    padding: 15px;
+}
+
+header .menu a:hover{
+    color: #90afc5;
+}
+/*--------------------------------------top-------------------------------------*/
+.secwave{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/city.jpg);
+    background-size: cover;
+}
+section .wave{
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background: url(../images//wave.png);
+    animation: animate 8s linear infinite;
+    -webkit-animation: animate 8s linear infinite;
+}
+section .wave::before{
+    content: "";
+    width: 100%;
+    height: 143px;
+    background: url(../images//wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    animation: animate-reverse 10s linear infinite;
+    -webkit-animation: animate-reverse 10s linear infinite;
+}
+section .wave::after{
+    content: "";
+    width: 100%;
+    height: 143px;
+    background: url(../images//wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    animation-delay: -5s;
+    animation: animate 20s linear infinite;
+    -webkit-animation: animate 20s linear infinite;
+}
+/*--------------------------------------about-------------------------------------*/
+.sec{
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.txt{
+    max-width: 800px;
+    margin: 0 auto;
+}
+/*--------------------------------------servicios-------------------------------------*/
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+    z-index: 3;
+}
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 15px rgba(0,0,0,0 .5);
+}
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.services .card{
+    background: #763626;
+    color: #fff;
+}
+.image{
+    max-width: 290px;
+    max-height: 190px;
+}
+/*----------------------------------------------back-----------------------------------------*/
+.stats{
+    background: #2a3132;
+    padding-top: 250px;
+    margin-top: -250px;
+    height: 400px;
+}
+
+/*------------------------------------------------team-----------------------------------------------------*/
+.sec-slider{
+    background: #fff;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec-slider .content-slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+}
+.imgslider{
+    width: 300px;
+    height: 350px;
+}
+/*------------------------------------contact-----------------------------------*/
+.contact{
+    background: #2a3132;
+}
+.contact h3,
+.contact p{
+    color: #fff;
+}
+.contactform{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.contactform form{
+    width: 100%;
+}
+.contactform .row{
+    display: flex;
+    width: 100%;
+}
+.contactform .row .inputb{
+    width: 50%;
+    margin: 0 20px;
+}
+.contactform .row .inputb2{
+    width: 100%;
+    margin: 0 20px;
+}
+.contactform .row input,
+.contactform .row textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+.contactform .row textarea{
+    height: 100px;
+}
+.contactform .row input::placeholder,
+.contactform .row textarea::placeholder{
+    color: rgba(255, 255, 255, 0.8);
+}
+.contactform .row input[type="submit"]{
+    background: #2a3132;
+    color: #90afc5;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.socialnet{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.socialnet ul{
+    display: flex;
+}
+.socialnet ul li{
+    list-style: none;
+}
+.socialnet ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+.socialnet a .social{
+    font-size: 35px;
+    max-width: 40px;
+    color: #fff;
+}
+.socialnet a:hover .social{
+    opacity: 0.5;
+}
+/*-----------------------------------------menu burger----------------------------*/
+#burger{
+    display: none;
+}
+
+/*----------------------------------------------responsive----------------------------------------*/
+@media (max-width: 980px){
+    #burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    #burger::before{
+        content: "";
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        box-shadow: 0 10px 0 #fff;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    #burger::after{
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        z-index: 1;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    .sticky #burger::before{
+        background: #fff;
+        box-shadow: 0 10px 0 #fff;
+    }
+    .sticky #burger::after{
+        background: #fff;
+    }
+    header{
+        padding: 5px 50px;
+        background: #90afc5;
+        
+    }
+    
+    header .menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .activee{
+        position: absolute;
+        width: 100vh;
+        top: 9vh;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #90afc5;
+        visibility: visible;
+    }
+    .activee a:hover{
+        opacity: 0.5;
+    }
+    header .activee a{
+        position: relative;
+        display: inline-block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: 3px 0;
+        font-size: 20px;
+        align-self: center;
+        text-decoration: none;
+        color: #763626;
+    }
+}
+/*--------------------------------------animaciones-------------------------------------*/
+@keyframes animate{
+    0%{
+        background-position: 0;
+    }100%{
+        background-position: 1360px;
+    }
+}
+@keyframes animate-reverse{
+    0%{
+        background-position: 1360px;
+    }100%{
+        background-position: 0;
+    }
+}
